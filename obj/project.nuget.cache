@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zqEFdnYyT2eGkoBjtGBdiH/Gsw0plb3Cl+qou0HXFpC4dH/M5Wyl4NwDn1YK22LRTATH6KmxmMJmyeBpBx3k2Q==",
+  "success": true,
+  "projectFilePath": "D:\\Renga Standard\\Plugins\\PluginsForRenga\\PluginsForRenga.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\green\\.nuget\\packages\\excelpackage\\1.0.0\\excelpackage.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
