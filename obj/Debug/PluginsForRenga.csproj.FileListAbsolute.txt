@@ -17,9 +17,6 @@ D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.csproj.CoreC
 D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.csproj.CopyComplete
 D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.dll
 D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.pdb
-D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Toolbox.Extensions.dll
-D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Toolbox.Extensions.pdb
-D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Toolbox.Logger.dll
-D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Toolbox.Logger.pdb
 D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.AddingProperties.resources
 D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.csproj.GenerateResource.cache
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Microsoft.Office.Interop.Excel.dll

@@ -9,7 +9,7 @@ namespace PluginsForRenga
 {
     public class PropertiesManagerPlugin: IPlugin
     {
-        public static Application m_app;
+        internal static Application m_app;
         private List<Renga.ActionEventSource> m_eventSources = new List<Renga.ActionEventSource>();
 
         public bool Initialize(string pluginFolder)
