@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Aspose.Cells;
 
 namespace PluginsForRenga
 {
@@ -42,7 +43,32 @@ namespace PluginsForRenga
             if (!File.Exists(file_path))
                 return;
 
-            fileLines = File.ReadAllLines(file_path);
+            label3.Text = file_path;
+
+            var wb = new Workbook(file_path);
+            var sheet = wb.Worksheets[0];
+            var rows = sheet.Cells.MaxDataRow;
+            var columns = sheet.Cells.MaxDataColumn;
+
+            var names = new List<string>();
+            var typeDatas = new List<string>();
+            var ids = new List<string>();
+            var objectsTypes = new List<string[]>();
+
+            for (var i = 0; i <= rows; i++)
+            {
+                for (var j = 0; j <= columns; j++)
+                {
+                    if (j == 0)
+                        names.Add((string)sheet.Cells[i, j].Value);
+                    else if (j == 1)
+                        typeDatas.Add((string)sheet.Cells[i, j].Value);
+                    else if (j == 2)
+                        ids.Add((string)sheet.Cells[i, j].Value);
+                    else if (j == 3)
+                        objectsTypes.Add(((string)sheet.Cells[i, j].Value).Split(','));
+                }
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
