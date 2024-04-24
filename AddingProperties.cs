@@ -82,6 +82,16 @@ namespace PluginsForRenga
             var propertyManager = PropertiesManagerPlugin.m_app.Project.PropertyManager;
             foreach (var objectType in propretiesObjectTypes.Keys)
             {
+                if(objectType == "")
+                {
+                    foreach (var property in propretiesObjectTypes[objectType])
+                        if (!propertyManager.IsPropertyRegistered(property.Id))
+                            propertyManager.RegisterProperty(
+                                property.Id,
+                                new PropertyDescription() { Name = property.Name, Type = property.Type });
+                    continue;
+                }
+
                 var guidObjectType = objectTypes[objectType];
                 foreach (var property in propretiesObjectTypes[objectType])
                 {
@@ -97,10 +107,15 @@ namespace PluginsForRenga
 
         private void CancelAddingClick(object sender, EventArgs e)
         {
+            this.Dispose();
+        }
+
+        private void AddingProperties_Load(object sender, EventArgs e)
+        {
 
         }
 
-        private void DeleteClick(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.8": {
+      "Aspose.Cells/24.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Aspose.Cells.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/Aspose.Cells.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "ExcelPackage/1.0.0": {
         "type": "package",
         "compile": {
@@ -13,6 +26,19 @@
       }
     },
     ".NETFramework,Version=v4.8/win": {
+      "Aspose.Cells/24.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Aspose.Cells.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/Aspose.Cells.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "ExcelPackage/1.0.0": {
         "type": "package",
         "compile": {
@@ -24,6 +50,19 @@
       }
     },
     ".NETFramework,Version=v4.8/win-x64": {
+      "Aspose.Cells/24.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Aspose.Cells.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/Aspose.Cells.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "ExcelPackage/1.0.0": {
         "type": "package",
         "compile": {
@@ -35,6 +74,19 @@
       }
     },
     ".NETFramework,Version=v4.8/win-x86": {
+      "Aspose.Cells/24.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Aspose.Cells.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/Aspose.Cells.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "ExcelPackage/1.0.0": {
         "type": "package",
         "compile": {
@@ -47,6 +99,40 @@
     }
   },
   "libraries": {
+    "Aspose.Cells/24.4.0": {
+      "sha512": "Q+2Ntx3L45v778Mkkv+d/KqQfXGH9mcVKZ5ZSGaQaxQpbEMAiAZKo2Du0UBSWVa9WvPCXV4+qmxdD83hJzLt9A==",
+      "type": "package",
+      "path": "aspose.cells/24.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Help/Aspose.Cells For .NET Documentation.chm",
+        "Help/Aspose.Cells.GridJs for .NETSTANDARD Documentation.chm",
+        "License/Aspose_End-User-License-Agreement.txt",
+        "License/thirdpartylicenses.Aspose.Cells.for.NET.pdf",
+        "aspose.cells.24.4.0.nupkg.sha512",
+        "aspose.cells.nuspec",
+        "images/aspose_cells-for-net.png",
+        "lib/net40-client/Aspose.Cells.dll",
+        "lib/net40-client/Aspose.Cells.xml",
+        "lib/net40/Aspose.Cells.dll",
+        "lib/net40/Aspose.Cells.xml",
+        "lib/net6.0-windows7.0/Aspose.Cells.dll",
+        "lib/net6.0-windows7.0/Aspose.Cells.xml",
+        "lib/net6.0/Aspose.Cells.dll",
+        "lib/net6.0/Aspose.Cells.xml",
+        "lib/net7.0-windows7.0/Aspose.Cells.dll",
+        "lib/net7.0-windows7.0/Aspose.Cells.xml",
+        "lib/net7.0/Aspose.Cells.dll",
+        "lib/net7.0/Aspose.Cells.xml",
+        "lib/net8.0-windows7.0/Aspose.Cells.dll",
+        "lib/net8.0-windows7.0/Aspose.Cells.xml",
+        "lib/net8.0/Aspose.Cells.dll",
+        "lib/net8.0/Aspose.Cells.xml",
+        "lib/netstandard2.0/Aspose.Cells.dll",
+        "lib/netstandard2.0/Aspose.Cells.xml"
+      ]
+    },
     "ExcelPackage/1.0.0": {
       "sha512": "0nysRe2k4NSrScTXt8yklUsTgelWKt+y6lM76vg+kOk9S/3/SvR9gojNjbeYCLe1x2f3pAkz1xZTuHg2nvDbtg==",
       "type": "package",
@@ -62,6 +148,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8": [
+      "Aspose.Cells >= 24.4.0",
       "ExcelPackage >= 1.0.0"
     ]
   },
@@ -98,6 +185,10 @@
     "frameworks": {
       "net48": {
         "dependencies": {
+          "Aspose.Cells": {
+            "target": "Package",
+            "version": "[24.4.0, )"
+          },
           "ExcelPackage": {
             "target": "Package",
             "version": "[1.0.0, )"

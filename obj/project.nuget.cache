@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zqEFdnYyT2eGkoBjtGBdiH/Gsw0plb3Cl+qou0HXFpC4dH/M5Wyl4NwDn1YK22LRTATH6KmxmMJmyeBpBx3k2Q==",
+  "dgSpecHash": "+/OKp/DFTDSM35hhQDJlH6YbuMFpIuQnEE3OVy3jFXXmyZ6QwLAixTdK24uShHLa7Jhge+1ZdczImHOGFHSbFw==",
   "success": true,
   "projectFilePath": "D:\\Renga Standard\\Plugins\\PluginsForRenga\\PluginsForRenga.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\green\\.nuget\\packages\\aspose.cells\\24.4.0\\aspose.cells.24.4.0.nupkg.sha512",
     "C:\\Users\\green\\.nuget\\packages\\excelpackage\\1.0.0\\excelpackage.1.0.0.nupkg.sha512"
   ],
   "logs": []

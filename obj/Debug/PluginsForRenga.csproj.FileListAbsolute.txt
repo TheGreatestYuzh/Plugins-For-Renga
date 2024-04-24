@@ -20,3 +20,5 @@ D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.pdb
 D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.AddingProperties.resources
 D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.csproj.GenerateResource.cache
 D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Aspose.Cells.dll
+D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.DeletingProperties.resources

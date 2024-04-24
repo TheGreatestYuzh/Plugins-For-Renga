@@ -34,6 +34,10 @@
       "frameworks": {
         "net48": {
           "dependencies": {
+            "Aspose.Cells": {
+              "target": "Package",
+              "version": "[24.4.0, )"
+            },
             "ExcelPackage": {
               "target": "Package",
               "version": "[1.0.0, )"
