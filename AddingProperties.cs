@@ -52,22 +52,20 @@ namespace PluginsForRenga
 
         private void AddPropertiesClick(object sender, EventArgs e)
         {
-            var rengaObjects = PropertiesManagerPlugin.m_app.Project.Model.GetObjects();
-            var temp0 = objectTypes["Аксессуары воздуховода"];
-            for (var id = 0; id < rengaObjects.Count; id++)
-            {
-                var objectModel = rengaObjects.GetById(id);
-                if (objectModel == null)
-                    continue;
-                var name = objectModel.Name;
-            }
-
+            var propretiesObjectTypes = new Dictionary<string, IProperty[]>();
             var propertyManager = PropertiesManagerPlugin.m_app.Project.PropertyManager;
-            for (var id = 0; id < propertyManager.PropertyCount; id++)
+            foreach (var objectType in propretiesObjectTypes.Keys)
             {
-                var guid = propertyManager.GetPropertyId(id);
-                var propsDesc = propertyManager.GetPropertyDescription(guid);
-                var name = propsDesc.Name;
+                var guidObjectType = objectTypes[objectType];
+                foreach (var property in propretiesObjectTypes[objectType])
+                {
+                    if (!propertyManager.IsPropertyRegistered(property.Id))
+                        propertyManager.RegisterProperty(
+                            property.Id,
+                            new PropertyDescription() { Name = property.Name, Type = property.Type });
+                    if (!propertyManager.IsPropertyAssignedToType(property.Id, guidObjectType))
+                        propertyManager.AssignPropertyToType(property.Id, guidObjectType);
+                }
             }
         }
 
