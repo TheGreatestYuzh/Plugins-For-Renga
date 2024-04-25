@@ -23,9 +23,9 @@ namespace PluginsForRenga
             var panelExtension = ui.CreateUIPanelExtension();
 
             panelExtension.AddToolButton(
-              AddPropertiesAction(ui, "Добавить свойства"));
+              AddPropertiesAction(ui, "Добавить свойства", pluginFolder));
             panelExtension.AddToolButton(
-              DeletePropertiesAction(ui, "Удалить свойства"));
+              DeletePropertiesAction(ui, "Удалить свойства", pluginFolder));
             panelExtension.AddToolButton(
               ExportPropertiesAsJSONAction(ui, "Экспортировать в формате JSON"));
 
@@ -43,11 +43,14 @@ namespace PluginsForRenga
             m_eventSources.Clear();
         }
 
-        private Renga.IAction AddPropertiesAction(Renga.IUI ui, string displayName)
+        private Renga.IAction AddPropertiesAction(Renga.IUI ui, string displayName, string pluginFolder)
         {
             var action = ui.CreateAction();
             action.DisplayName = displayName;
             var events = new Renga.ActionEventSource(action);
+            var actionIcon = ui.CreateImage();
+            actionIcon.LoadFromFile(pluginFolder + "\\addProperties.png");
+            action.Icon = actionIcon;
 
             events.Triggered += (s, e) =>
             {
@@ -60,11 +63,14 @@ namespace PluginsForRenga
             return action;
         }
 
-        private Renga.IAction DeletePropertiesAction(Renga.IUI ui, string displayName)
+        private Renga.IAction DeletePropertiesAction(Renga.IUI ui, string displayName, string pluginFolder)
         {
             var action = ui.CreateAction();
             action.DisplayName = displayName;
             var events = new Renga.ActionEventSource(action);
+            var actionIcon = ui.CreateImage();
+            actionIcon.LoadFromFile(pluginFolder + "\\deleteProperties.png");
+            action.Icon = actionIcon;
 
             events.Triggered += (s, e) =>
             {
