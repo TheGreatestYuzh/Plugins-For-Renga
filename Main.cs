@@ -1,15 +1,19 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Renga;
+using Newtonsoft.Json;
+
 
 namespace PluginsForRenga
 {
     public class PropertiesManagerPlugin: IPlugin
     {
-        internal static Application m_app;
+        internal static Renga.Application m_app;
         private List<Renga.ActionEventSource> m_eventSources = new List<Renga.ActionEventSource>();
 
         public bool Initialize(string pluginFolder)
@@ -22,6 +26,8 @@ namespace PluginsForRenga
               AddPropertiesAction(ui, "Добавить свойства"));
             panelExtension.AddToolButton(
               DeletePropertiesAction(ui, "Удалить свойства"));
+            panelExtension.AddToolButton(
+              ExportPropertiesAsJSONAction(ui, "Экспортировать в формате JSON"));
 
             ui.AddExtensionToPrimaryPanel(panelExtension);
             ui.AddExtensionToActionsPanel(panelExtension, Renga.ViewType.ViewType_View3D);
@@ -60,12 +66,40 @@ namespace PluginsForRenga
             action.DisplayName = displayName;
             var events = new Renga.ActionEventSource(action);
 
-
             events.Triggered += (s, e) =>
             {
                 var deletingWindow = new DeletingProperties();
                 System.Windows.Forms.Application.Run(deletingWindow);
                 deletingWindow.Close();
+            };
+
+            m_eventSources.Add(events);
+            return action;
+        }
+
+        private Renga.IAction ExportPropertiesAsJSONAction(Renga.IUI ui, string displayName)
+        {
+            var action = ui.CreateAction();
+            action.DisplayName = displayName;
+            var events = new Renga.ActionEventSource(action);
+
+            events.Triggered += (s, e) =>
+            {
+                var formattedProperties = PropertiesJSONFormatHandler.GetFormattedProperties();
+                var serializedProperties = JsonConvert.SerializeObject(formattedProperties);
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*",
+                    DefaultExt = "json",
+                    AddExtension = true,
+                    FileName = "properties.json"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllText(saveFileDialog.FileName, serializedProperties);
+                    MessageBox.Show("Файл успешно сохранен!");
+                }
             };
 
             m_eventSources.Add(events);

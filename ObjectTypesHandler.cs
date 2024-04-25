@@ -9,9 +9,9 @@ using Renga;
 
 namespace PluginsForRenga
 {
-    internal class ObjectTypesHandler
+    public class ObjectTypesHandler
     {
-        private static Dictionary<string, Guid> map = new Dictionary<string, Guid>
+        public static Dictionary<string, Guid> Map = new Dictionary<string, Guid>
         {
             { "Аксессуары воздуховода", ObjectTypes.DuctAccessory },
             { "Угловые размеры", ObjectTypes.AngularDimension },
@@ -89,6 +89,6 @@ namespace PluginsForRenga
             { "Здания", StyleTypeIds.BuildingElementModel},
         };
 
-        public Guid this[string russianName] { get => map[russianName]; }
+        public Guid this[string russkoeImya] { get => Map[russkoeImya]; }
     }
 }

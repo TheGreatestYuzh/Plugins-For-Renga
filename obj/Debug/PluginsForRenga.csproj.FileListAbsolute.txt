@@ -22,3 +22,13 @@ D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.csproj.Gener
 D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Microsoft.Office.Interop.Excel.dll
 D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Aspose.Cells.dll
 D:\Renga Standard\Plugins\PluginsForRenga\obj\Debug\PluginsForRenga.DeletingProperties.resources
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\System.Buffers.dll
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\System.Memory.dll
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\System.Numerics.Vectors.dll
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\System.Text.Encodings.Web.dll
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\System.Text.Json.dll
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\System.ValueTuple.dll
+D:\Renga Standard\Plugins\PluginsForRenga\bin\Debug\Newtonsoft.Json.dll
