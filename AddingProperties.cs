@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Aspose.Cells;
+using PropertyClass;
 
 namespace PluginsForRenga
 {
@@ -82,6 +83,21 @@ namespace PluginsForRenga
                         else if (j == 3)
                             objectsTypes.Add(((string)sheet.Cells[i, j].Value).Split(','));
                     }
+                }
+            }
+
+            var objTypeDict = new Dictionary<string, List<PropertyClass>>();    //Create a Dictionary
+            for (var i = 0; i < names.Count; i++)
+            {
+                var prop = new PropertyClass(names[i], typeDatas[i], ids[i]);   //Property view as a class
+                var objTypes = objectsTypes[i];
+                foreach (var objType in  objTypes)                              //Adding property to all their ObjectTypes
+                {
+                    if (!objTypeDict.ContainsKey(objType))
+                    {
+                        objTypeDict.Add(objType, new List<PropertyClass>());
+                    }
+                    objTypeDict[objType].Add(prop);
                 }
             }
         }

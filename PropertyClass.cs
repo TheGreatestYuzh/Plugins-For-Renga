@@ -8,9 +8,9 @@ namespace PluginsForRenga
     {
         public string Name { get; set; }
         public string Type { get; set; }
-        public int Id { get; set; }
+        public string Id { get; set; }
 
-        public MyClass(string name, string type, int id)
+        public PropertyClass(string name, string type, string id)
         {
             Name = name;
             Type = type;
