@@ -26,8 +26,9 @@ namespace PluginsForRenga
               AddPropertiesAction(ui, "Добавить свойства", pluginFolder));
             panelExtension.AddToolButton(
               DeletePropertiesAction(ui, "Удалить свойства", pluginFolder));
-            panelExtension.AddToolButton(
-              ExportPropertiesAsJSONAction(ui, "Экспортировать в формате JSON"));
+
+            ui.AddExportAction(
+              ExportPropertiesAsJSONAction(ui, "Экспортировать свойства в формате JSON"));
 
             ui.AddExtensionToPrimaryPanel(panelExtension);
             ui.AddExtensionToActionsPanel(panelExtension, Renga.ViewType.ViewType_View3D);
