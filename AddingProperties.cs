@@ -45,28 +45,43 @@ namespace PluginsForRenga
 
             label3.Text = file_path;
 
-            var wb = new Workbook(file_path);
-            var sheet = wb.Worksheets[0];
-            var rows = sheet.Cells.MaxDataRow;
-            var columns = sheet.Cells.MaxDataColumn;
-
             var names = new List<string>();
             var typeDatas = new List<string>();
             var ids = new List<string>();
             var objectsTypes = new List<string[]>();
 
-            for (var i = 0; i <= rows; i++)
+            if (file_path.Substring(file_path.Length - 3) == "csv")
             {
-                for (var j = 0; j <= columns; j++)
+                using (StreamReader sr = new StreamReader(file_path))
                 {
-                    if (j == 0)
-                        names.Add((string)sheet.Cells[i, j].Value);
-                    else if (j == 1)
-                        typeDatas.Add((string)sheet.Cells[i, j].Value);
-                    else if (j == 2)
-                        ids.Add((string)sheet.Cells[i, j].Value);
-                    else if (j == 3)
-                        objectsTypes.Add(((string)sheet.Cells[i, j].Value).Split(','));
+                    var datas = sr.ReadLine().Split(',');
+                    var (name, type, id) = (datas[0], datas[1], datas[2]);
+                    names.Add(name);
+                    typeDatas.Add(type);
+                    ids.Add(id);
+                    objectsTypes.Add(datas[3].Split());
+                }
+            }
+            else if (file_path.Substring(file_path.Length - 4) == "xlsx")
+            {
+                var wb = new Workbook(file_path);
+                var sheet = wb.Worksheets[0];
+                var rows = sheet.Cells.MaxDataRow;
+                var columns = sheet.Cells.MaxDataColumn;
+
+                for (var i = 0; i <= rows; i++)
+                {
+                    for (var j = 0; j <= columns; j++)
+                    {
+                        if (j == 0)
+                            names.Add((string)sheet.Cells[i, j].Value);
+                        else if (j == 1)
+                            typeDatas.Add((string)sheet.Cells[i, j].Value);
+                        else if (j == 2)
+                            ids.Add((string)sheet.Cells[i, j].Value);
+                        else if (j == 3)
+                            objectsTypes.Add(((string)sheet.Cells[i, j].Value).Split(','));
+                    }
                 }
             }
         }
