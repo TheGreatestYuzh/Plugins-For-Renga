@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Renga Standard\\Plugins\\PluginsForRenga\\PluginsForRenga.csproj": {}
+    "D:\\aleha\\Проекты\\Для Renga\\Plugins-For-Renga\\PluginsForRenga.csproj": {}
   },
   "projects": {
-    "D:\\Renga Standard\\Plugins\\PluginsForRenga\\PluginsForRenga.csproj": {
+    "D:\\aleha\\Проекты\\Для Renga\\Plugins-For-Renga\\PluginsForRenga.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Renga Standard\\Plugins\\PluginsForRenga\\PluginsForRenga.csproj",
+        "projectUniqueName": "D:\\aleha\\Проекты\\Для Renga\\Plugins-For-Renga\\PluginsForRenga.csproj",
         "projectName": "PluginsForRenga",
-        "projectPath": "D:\\Renga Standard\\Plugins\\PluginsForRenga\\PluginsForRenga.csproj",
-        "packagesPath": "C:\\Users\\green\\.nuget\\packages\\",
-        "outputPath": "D:\\Renga Standard\\Plugins\\PluginsForRenga\\obj\\",
+        "projectPath": "D:\\aleha\\Проекты\\Для Renga\\Plugins-For-Renga\\PluginsForRenga.csproj",
+        "packagesPath": "C:\\Users\\Mantikor4ik\\.nuget\\packages\\",
+        "outputPath": "D:\\aleha\\Проекты\\Для Renga\\Plugins-For-Renga\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "D:\\aleha\\Программы\\VS\\3\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\green\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mantikor4ik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +33,11 @@
           "net48": {
             "projectReferences": {}
           }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -51,17 +60,6 @@
               "version": "[8.0.3, )"
             }
           }
-        }
-      },
-      "runtimes": {
-        "win": {
-          "#import": []
-        },
-        "win-x64": {
-          "#import": []
-        },
-        "win-x86": {
-          "#import": []
         }
       }
     }
