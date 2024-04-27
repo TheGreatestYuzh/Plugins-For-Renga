@@ -42,7 +42,7 @@ namespace PluginsForRenga
 
             var filePath = selectingFileWindow.FileName;
             var fileExtension = Path.GetExtension(filePath);
-            if (fileExtension != "csv" || fileExtension != "xlsx")
+            if (fileExtension != ".csv" && fileExtension != ".xlsx")
             {
                 MessageBox.Show("Неизвестный тип файла. Возомжные типы: .csv, .xlsx", "AHTUNG");
                 return;
@@ -60,14 +60,16 @@ namespace PluginsForRenga
             var ids = new List<string>();
             var objectsTypes = new List<string[]>();
 
-            if (fileExtension == "csv")
+            if (fileExtension == ".csv")
             {
                 using (var sr = new StreamReader(filePath))
                 {
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        var datas = line.Split(',');
+                        var tempData = line.Split('"');
+                        var (firstBlock, types, secondBlock) = (tempData[0], tempData[1], tempData[2]);
+                        var datas = firstBlock.Split(',');
                         if (datas.Length != 4)
                         {
                             MessageBox.Show("Неверный формат входных данных", "AHTUNG");
@@ -78,11 +80,11 @@ namespace PluginsForRenga
                         names.Add(name);
                         typeDatas.Add(type);
                         ids.Add(id);
-                        objectsTypes.Add(datas[3].Split());
+                        objectsTypes.Add(types.Split(new string[] { ", " }, System.StringSplitOptions.None));
                     }
                 }
             }
-            else if (fileExtension == "xlsx")
+            else if (fileExtension == ".xlsx")
             {
                 var wb = new Workbook(filePath);
                 var sheet = wb.Worksheets[0];
@@ -147,7 +149,7 @@ namespace PluginsForRenga
                     unknowObjectTypes.Add(objectType);
                     continue;
                 }
-
+                
                 if (objectType == "")
                 {
                     foreach (var property in propertiesObjectTypes[objectType])
@@ -200,10 +202,10 @@ namespace PluginsForRenga
                     }
                 }
                 if (unknowObjectTypes.Count > 0)
-                    MessageBox.Show("Данные типы объектов не существуют, поэтому не добавлены:\n" +
+                    FlexibleMessageBox.Show("Данные типы объектов не существуют, поэтому не добавлены:\n" +
                         string.Join(",\n", unknowObjectTypes), "AHTUNG");
                 if (unknowProperties.Count > 0)
-                    MessageBox.Show("Данные свойства имеют невалидный guid, поэтому не добавлены:\n" +
+                    FlexibleMessageBox.Show("Данные свойства имеют невалидный guid, поэтому не добавлены:\n" +
                         string.Join(",\n", unknowProperties), "AHTUNG");
 
                 MessageBox.Show("Свойства успешно добавлены!", "Завершение");

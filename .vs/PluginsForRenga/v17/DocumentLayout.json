@@ -1,0 +1,136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|c:\\program files\\renga standard\\plugins\\pluginsforrenga\\deletingproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|solutionrelative:deletingproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\addingproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|solutionrelative:addingproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|c:\\program files\\renga standard\\plugins\\pluginsforrenga\\flexmessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|solutionrelative:flexmessagebox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|solutionrelative:Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\ObjectTypesHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|solutionrelative:ObjectTypesHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\PropertyTypesHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|solutionrelative:PropertyTypesHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\PropertiesFormatHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94830522-0564-4A85-A851-240D0DBC78E8}|PluginsForRenga.csproj|solutionrelative:PropertiesFormatHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FlexMessageBox.cs",
+              "DocumentMoniker": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\FlexMessageBox.cs",
+              "RelativeDocumentMoniker": "FlexMessageBox.cs",
+              "ToolTip": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\FlexMessageBox.cs",
+              "RelativeToolTip": "FlexMessageBox.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAAFAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T16:57:50.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddingProperties.cs",
+              "DocumentMoniker": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\AddingProperties.cs",
+              "RelativeDocumentMoniker": "AddingProperties.cs",
+              "ToolTip": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\AddingProperties.cs",
+              "RelativeToolTip": "AddingProperties.cs",
+              "ViewState": "AQIAALcAAAAAAAAAAAArwM8AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T15:18:04.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DeletingProperties.cs",
+              "DocumentMoniker": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\DeletingProperties.cs",
+              "RelativeDocumentMoniker": "DeletingProperties.cs",
+              "ToolTip": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\DeletingProperties.cs",
+              "RelativeToolTip": "DeletingProperties.cs",
+              "ViewState": "AQIAAK8AAAAAAAAAAAAwwMUAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T15:18:04.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\Main.cs",
+              "RelativeDocumentMoniker": "Main.cs",
+              "ToolTip": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\Main.cs",
+              "RelativeToolTip": "Main.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T15:18:04.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PropertyTypesHandler.cs",
+              "DocumentMoniker": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\PropertyTypesHandler.cs",
+              "RelativeDocumentMoniker": "PropertyTypesHandler.cs",
+              "ToolTip": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\PropertyTypesHandler.cs",
+              "RelativeToolTip": "PropertyTypesHandler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwCUAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T15:18:04.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ObjectTypesHandler.cs",
+              "DocumentMoniker": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\ObjectTypesHandler.cs",
+              "RelativeDocumentMoniker": "ObjectTypesHandler.cs",
+              "ToolTip": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\ObjectTypesHandler.cs",
+              "RelativeToolTip": "ObjectTypesHandler.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAawFsAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T15:18:04.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PropertiesFormatHandler.cs",
+              "DocumentMoniker": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\PropertiesFormatHandler.cs",
+              "RelativeDocumentMoniker": "PropertiesFormatHandler.cs",
+              "ToolTip": "C:\\Program Files\\Renga Standard\\Plugins\\PluginsForRenga\\PropertiesFormatHandler.cs",
+              "RelativeToolTip": "PropertiesFormatHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T15:18:04.294Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
