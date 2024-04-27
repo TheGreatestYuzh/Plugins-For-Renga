@@ -19,11 +19,12 @@ namespace PluginsForRenga
                 for (var index = 0; index < propertyManager.PropertyCount; index++)
                 {
                     var propertyId = propertyManager.GetPropertyId(index);
+                    var propertyType = propertyManager.GetPropertyType(propertyId);
                     if (propertyManager.IsPropertyAssignedToType(propertyId, objectType.Value))
                         objectTypeProperties.Add(new Dictionary<string, string>
                         {
                             { "Имя", propertyManager.GetPropertyName(propertyId) },
-                            { "Тип данных", "FFFFFFFFFFFFFFFFFFFFFFFF" },
+                            { "Тип данных", PropertyTypesHandler.MapInverse[propertyType] },
                             { "Уникальный идентификатор", propertyId.ToString() }
                         });
                 }

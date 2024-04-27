@@ -10,14 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Aspose.Cells;
-using PropertyClass;
 
 namespace PluginsForRenga
 {
     public partial class AddingProperties : Form
     {
-        private static string[] fileLines;
+        private static Dictionary<string, List<PropertyClass>> propertiesObjectTypes;
         private static ObjectTypesHandler objectTypes = new ObjectTypesHandler();
+        private static PropertyTypesHandler propertyTypes = new PropertyTypesHandler();
 
         public AddingProperties()
         {
@@ -40,35 +40,59 @@ namespace PluginsForRenga
             if (selectingFileWindow.ShowDialog() != DialogResult.OK)
                 return;
 
-            var file_path = selectingFileWindow.FileName;
-            if (!File.Exists(file_path))
+            var filePath = selectingFileWindow.FileName;
+            var fileExtension = Path.GetExtension(filePath);
+            if (fileExtension != "csv" || fileExtension != "xlsx")
+            {
+                MessageBox.Show("Неизвестный тип файла. Возомжные типы: .csv, .xlsx", "AHTUNG");
                 return;
+            }
 
-            label3.Text = file_path;
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Такого файла не существует", "AHTUNG");
+                return;
+            }
+            label3.Text = filePath;
 
             var names = new List<string>();
             var typeDatas = new List<string>();
             var ids = new List<string>();
             var objectsTypes = new List<string[]>();
 
-            if (file_path.Substring(file_path.Length - 3) == "csv")
+            if (fileExtension == "csv")
             {
-                using (StreamReader sr = new StreamReader(file_path))
+                using (var sr = new StreamReader(filePath))
                 {
-                    var datas = sr.ReadLine().Split(',');
-                    var (name, type, id) = (datas[0], datas[1], datas[2]);
-                    names.Add(name);
-                    typeDatas.Add(type);
-                    ids.Add(id);
-                    objectsTypes.Add(datas[3].Split());
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        var datas = line.Split(',');
+                        if (datas.Length != 4)
+                        {
+                            MessageBox.Show("Неверный формат входных данных", "AHTUNG");
+                            return;
+                        }
+
+                        var (name, type, id) = (datas[0], datas[1], datas[2]);
+                        names.Add(name);
+                        typeDatas.Add(type);
+                        ids.Add(id);
+                        objectsTypes.Add(datas[3].Split());
+                    }
                 }
             }
-            else if (file_path.Substring(file_path.Length - 4) == "xlsx")
+            else if (fileExtension == "xlsx")
             {
-                var wb = new Workbook(file_path);
+                var wb = new Workbook(filePath);
                 var sheet = wb.Worksheets[0];
                 var rows = sheet.Cells.MaxDataRow;
                 var columns = sheet.Cells.MaxDataColumn;
+                if (columns != 3)
+                {
+                    MessageBox.Show("Неверный формат входных данных", "AHTUNG");
+                    return;
+                }
 
                 for (var i = 0; i <= rows; i++)
                 {
@@ -86,18 +110,16 @@ namespace PluginsForRenga
                 }
             }
 
-            var objTypeDict = new Dictionary<string, List<PropertyClass>>();    //Create a Dictionary
+            propertiesObjectTypes = new Dictionary<string, List<PropertyClass>>();    //Create a Dictionary
             for (var i = 0; i < names.Count; i++)
             {
                 var prop = new PropertyClass(names[i], typeDatas[i], ids[i]);   //Property view as a class
                 var objTypes = objectsTypes[i];
-                foreach (var objType in  objTypes)                              //Adding property to all their ObjectTypes
+                foreach (var objType in objTypes)                              //Adding property to all their ObjectTypes
                 {
-                    if (!objTypeDict.ContainsKey(objType))
-                    {
-                        objTypeDict.Add(objType, new List<PropertyClass>());
-                    }
-                    objTypeDict[objType].Add(prop);
+                    if (!propertiesObjectTypes.ContainsKey(objType))
+                        propertiesObjectTypes.Add(objType, new List<PropertyClass>());
+                    propertiesObjectTypes[objType].Add(prop);
                 }
             }
         }
@@ -109,30 +131,83 @@ namespace PluginsForRenga
 
         private void AddPropertiesClick(object sender, EventArgs e)
         {
-            var propretiesObjectTypes = new Dictionary<string, IProperty[]>();
-            var propertyManager = PropertiesManagerPlugin.m_app.Project.PropertyManager;
-            foreach (var objectType in propretiesObjectTypes.Keys)
+            if (propertiesObjectTypes == null || propertiesObjectTypes.Count == 0)
             {
-                if(objectType == "")
+                MessageBox.Show("Файл не выбран или в выбранном вами файле нет свойств", "AHTUNG");
+                return;
+            }
+
+            var propertyManager = PropertiesManagerPlugin.m_app.Project.PropertyManager;
+            var unknowObjectTypes = new List<string>();
+            var unknowProperties = new List<string>();
+            foreach (var objectType in propertiesObjectTypes.Keys)
+            {
+                if (!ObjectTypesHandler.Map.ContainsKey(objectType))
                 {
-                    foreach (var property in propretiesObjectTypes[objectType])
-                        if (!propertyManager.IsPropertyRegistered(property.Id))
-                            propertyManager.RegisterProperty(
-                                property.Id,
-                                new PropertyDescription() { Name = property.Name, Type = property.Type });
+                    unknowObjectTypes.Add(objectType);
+                    continue;
+                }
+
+                if (objectType == "")
+                {
+                    foreach (var property in propertiesObjectTypes[objectType])
+                    {
+                        try
+                        {
+                            var propertyId = new Guid(property.Id);
+                            if (!PropertyTypesHandler.Map.ContainsKey(property.Type))
+                            {
+                                unknowProperties.Add(property.Name);
+                                continue;
+                            }
+
+                            if (!propertyManager.IsPropertyRegistered(propertyId))
+                                propertyManager.RegisterProperty(
+                                    propertyId,
+                                    new PropertyDescription() { Name = property.Name, Type = propertyTypes[property.Type] });
+                        }
+                        catch
+                        {
+                            unknowProperties.Add(property.Name);
+                        }
+                    }
                     continue;
                 }
 
                 var guidObjectType = objectTypes[objectType];
-                foreach (var property in propretiesObjectTypes[objectType])
+                foreach (var property in propertiesObjectTypes[objectType])
                 {
-                    if (!propertyManager.IsPropertyRegistered(property.Id))
-                        propertyManager.RegisterProperty(
-                            property.Id,
-                            new PropertyDescription() { Name = property.Name, Type = property.Type });
-                    if (!propertyManager.IsPropertyAssignedToType(property.Id, guidObjectType))
-                        propertyManager.AssignPropertyToType(property.Id, guidObjectType);
+                    try
+                    {
+                        var propertyId = new Guid(property.Id);
+                        if (!PropertyTypesHandler.Map.ContainsKey(property.Type))
+                        {
+                            unknowProperties.Add(property.Name);
+                            continue;
+                        }
+
+                        if (!propertyManager.IsPropertyRegistered(propertyId))
+                            propertyManager.RegisterPropertyS(
+                                property.Id,
+                                property.Name,
+                                propertyTypes[property.Type]);
+                        if (!propertyManager.IsPropertyAssignedToType(propertyId, guidObjectType))
+                            propertyManager.AssignPropertyToType(propertyId, guidObjectType);
+                    }
+                    catch
+                    {
+                        unknowProperties.Add(property.Name);
+                    }
                 }
+                if (unknowObjectTypes.Count > 0)
+                    MessageBox.Show("Данные типы объектов не существуют, поэтому не добавлены:\n" +
+                        string.Join(",\n", unknowObjectTypes), "AHTUNG");
+                if (unknowProperties.Count > 0)
+                    MessageBox.Show("Данные свойства имеют невалидный guid, поэтому не добавлены:\n" +
+                        string.Join(",\n", unknowProperties), "AHTUNG");
+
+                MessageBox.Show("Свойства успешно добавлены!", "Завершение");
+                this.Dispose();
             }
         }
 

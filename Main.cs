@@ -8,7 +8,6 @@ using System.Windows.Forms;
 using Renga;
 using Newtonsoft.Json;
 
-
 namespace PluginsForRenga
 {
     public class PropertiesManagerPlugin: IPlugin
@@ -93,7 +92,7 @@ namespace PluginsForRenga
             events.Triggered += (s, e) =>
             {
                 var formattedProperties = PropertiesJSONFormatHandler.GetFormattedProperties();
-                var serializedProperties = JsonConvert.SerializeObject(formattedProperties);
+                var serializedProperties = JsonConvert.SerializeObject(formattedProperties, Formatting.Indented);
                 SaveFileDialog saveFileDialog = new SaveFileDialog
                 {
                     Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*",
