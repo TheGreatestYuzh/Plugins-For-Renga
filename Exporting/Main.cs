@@ -19,13 +19,9 @@ namespace RengaExtensions.Exporting
         {
             m_app = new Renga.Application();
             var ui = m_app.UI;
-            var panelExtension = ui.CreateUIPanelExtension();
 
             ui.AddExportAction(
               ExportPropertiesAsJSONAction(ui, "Экспортировать свойства в формате JSON"));
-
-            ui.AddExtensionToPrimaryPanel(panelExtension);
-            ui.AddExtensionToActionsPanel(panelExtension, Renga.ViewType.ViewType_View3D);
 
             return true;
         }

@@ -201,16 +201,16 @@ namespace RengaExtensions.AddingDeleting
                         unknowProperties.Add(property.Name);
                     }
                 }
-                if (unknowObjectTypes.Count > 0)
-                    FlexibleMessageBox.Show("Данные типы объектов не существуют, поэтому не добавлены:\n" +
-                        string.Join(",\n", unknowObjectTypes), "AHTUNG");
-                if (unknowProperties.Count > 0)
-                    FlexibleMessageBox.Show("Данные свойства имеют невалидный guid, поэтому не добавлены:\n" +
-                        string.Join(",\n", unknowProperties), "AHTUNG");
-
-                MessageBox.Show("Свойства успешно добавлены!", "Завершение");
-                this.Dispose();
             }
+            if (unknowObjectTypes.Count > 0)
+                FlexibleMessageBox.Show("Данные типы объектов не существуют, поэтому не добавлены:\n" +
+                    string.Join(",\n", unknowObjectTypes), "AHTUNG");
+            if (unknowProperties.Count > 0)
+                FlexibleMessageBox.Show("Данные свойства имеют невалидный guid, поэтому не добавлены:\n" +
+                    string.Join(",\n", unknowProperties), "AHTUNG");
+
+            MessageBox.Show("Свойства успешно добавлены!", "Завершение");
+            this.Dispose();
         }
 
         private void CancelAddingClick(object sender, EventArgs e)

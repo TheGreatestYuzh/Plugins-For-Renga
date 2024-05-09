@@ -1,0 +1,11 @@
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\bin\Debug\Exporting.dll
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\bin\Debug\Exporting.pdb
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\bin\Debug\Newtonsoft.Json.dll
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\bin\Debug\Renga.NET.PluginUtility.dll
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\obj\Debug\Exporting.csproj.AssemblyReference.cache
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\obj\Debug\Interop.Renga.dll
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\obj\Debug\Exporting.csproj.ResolveComReference.cache
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\obj\Debug\Exporting.csproj.CoreCompileInputs.cache
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\obj\Debug\Exporting.csproj.CopyComplete
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\obj\Debug\Exporting.dll
+D:\Renga Standard\Plugins\PluginsForRenga\Exporting\obj\Debug\Exporting.pdb

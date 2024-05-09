@@ -192,10 +192,10 @@ namespace RengaExtensions.AddingDeleting
                 }
             }
             if (unknowObjectTypes.Count > 0)
-                FlexibleMessageBox.Show("Данные типы объектов не существуют, поэтому не добавлены:\n" +
+                FlexibleMessageBox.Show("Данные типы объектов не существуют, поэтому не удалены:\n" +
                     string.Join(",\n", unknowObjectTypes), "AHTUNG");
             if (unknowProperties.Count > 0)
-                FlexibleMessageBox.Show("Данные свойства имеют невалидный guid, поэтому не добавлены:\n" +
+                FlexibleMessageBox.Show("Данные свойства имеют невалидный guid, поэтому не удалени:\n" +
                     string.Join(",\n", unknowProperties), "AHTUNG");
 
             MessageBox.Show("Свойства успешно удалены!", "Завершение");
