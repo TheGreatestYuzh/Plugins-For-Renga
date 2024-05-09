@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vp+o1B1UeWMVwQlwF+lXQpKYIQr3IGizy8jaIcHhvRBNipDtTGZOSdK1HxPsw16ypZSILxLxsMODu62X0+pqGQ==",
+  "success": true,
+  "projectFilePath": "D:\\Renga Standard\\Plugins\\PluginsForRenga\\AddingDeleting\\AddingDeleting.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\green\\.nuget\\packages\\aspose.cells\\24.4.0\\aspose.cells.24.4.0.nupkg.sha512",
+    "C:\\Users\\green\\.nuget\\packages\\excelpackage\\1.0.0\\excelpackage.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

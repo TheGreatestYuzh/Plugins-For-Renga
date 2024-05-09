@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginsForRenga", "PluginsForRenga.csproj", "{94830522-0564-4A85-A851-240D0DBC78E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exporting", "Exporting\Exporting.csproj", "{5B268F70-8A1E-4ED6-A4A0-B2BF0E673A16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingDeleting", "AddingDeleting\AddingDeleting.csproj", "{94830522-0564-4A85-A851-240D0DBC78E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B268F70-8A1E-4ED6-A4A0-B2BF0E673A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B268F70-8A1E-4ED6-A4A0-B2BF0E673A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B268F70-8A1E-4ED6-A4A0-B2BF0E673A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B268F70-8A1E-4ED6-A4A0-B2BF0E673A16}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94830522-0564-4A85-A851-240D0DBC78E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{94830522-0564-4A85-A851-240D0DBC78E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94830522-0564-4A85-A851-240D0DBC78E8}.Release|Any CPU.ActiveCfg = Release|Any CPU

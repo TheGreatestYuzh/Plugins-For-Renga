@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Renga Standard\\Plugins\\PluginsForRenga\\AddingDeleting\\AddingDeleting.csproj": {}
+  },
+  "projects": {
+    "D:\\Renga Standard\\Plugins\\PluginsForRenga\\AddingDeleting\\AddingDeleting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Renga Standard\\Plugins\\PluginsForRenga\\AddingDeleting\\AddingDeleting.csproj",
+        "projectName": "PluginsForRenga",
+        "projectPath": "D:\\Renga Standard\\Plugins\\PluginsForRenga\\AddingDeleting\\AddingDeleting.csproj",
+        "packagesPath": "C:\\Users\\green\\.nuget\\packages\\",
+        "outputPath": "D:\\Renga Standard\\Plugins\\PluginsForRenga\\AddingDeleting\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\green\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Aspose.Cells": {
+              "target": "Package",
+              "version": "[24.4.0, )"
+            },
+            "ExcelPackage": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

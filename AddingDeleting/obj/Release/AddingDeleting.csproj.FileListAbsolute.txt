@@ -1,0 +1,15 @@
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\bin\Release\PluginsForRenga.dll
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\bin\Release\PluginsForRenga.pdb
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\bin\Release\Aspose.Cells.dll
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\bin\Release\Microsoft.Office.Interop.Excel.dll
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\bin\Release\Renga.NET.PluginUtility.dll
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\obj\Release\AddingDeleting.csproj.AssemblyReference.cache
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\obj\Release\Interop.Renga.dll
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\obj\Release\AddingDeleting.csproj.ResolveComReference.cache
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\obj\Release\RengaExtensions.AddingDeleting.AddingProperties.resources
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\obj\Release\RengaExtensions.AddingDeleting.DeletingProperties.resources
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\obj\Release\AddingDeleting.csproj.GenerateResource.cache
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\obj\Release\AddingDeleting.csproj.CoreCompileInputs.cache
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\obj\Release\AddingDeleting.csproj.CopyComplete
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\obj\Release\PluginsForRenga.dll
+D:\Renga Standard\Plugins\PluginsForRenga\AddingDeleting\obj\Release\PluginsForRenga.pdb
