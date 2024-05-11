@@ -1,0 +1,9 @@
+<RengaPlugin>
+	<Name>AddingDeletingPropertiesSet</Name>
+	<Version>1.0</Version>
+	<RequiredAPIVersion>2.32</RequiredAPIVersion>
+	<Vendor>Renga Software LLC</Vendor>
+	<Copyright>Copyright Renga Software LLC, 2018. All rights reserved.</Copyright>
+	<PluginFilename>AddingDeleting.dll</PluginFilename>
+	<PluginType>Net</PluginType>
+</RengaPlugin>
